@@ -33,8 +33,11 @@ export default class AddRecette extends Component {
             <div className="card">
                 <form action="" className="admin-form ajouter-recette" onSubmit={this.handleSubmit}>
                     <input value={this.state.nom} onChange={this.handleChange} type="text" name='nom' placeholder='Nom de la recette' required/>
+
                     <input value={this.state.image} onChange={this.handleChange} name='image' type="text" placeholder="Nom de l'image" />
+
                     <textarea value={this.state.ingredients} onChange={this.handleChange} name="ingredients" rows="3" placeholder="Ingredients" required></textarea>
+                    
                     <textarea value={this.state.instructions} onChange={this.handleChange} name="instructions" rows="15" placeholder='Instructions'required ></textarea>
                     <button type='submit'>+</button>
                 </form>
