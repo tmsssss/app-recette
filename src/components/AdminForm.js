@@ -9,7 +9,7 @@ const AdminForm = ({ recettes, id: key, updateRecette, deleteRecette }) => {
         recette[name] = value
         updateRecette(key, recette)
     }
-    
+
     return (
         <div className="card">
 
@@ -24,7 +24,7 @@ const AdminForm = ({ recettes, id: key, updateRecette, deleteRecette }) => {
             <textarea name="instructions" value={recette.instructions} onChange={(e) => handleChange(e, key)} rows="15" placeholder='Instructions'required ></textarea>
 
             </form>
-            <button onClick={(e) => deleteRecette(key)}>Supprimer</button>
+            <button onClick={() => deleteRecette(key)}>Supprimer</button>
 
         </div>
     )

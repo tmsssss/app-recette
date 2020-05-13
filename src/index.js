@@ -14,7 +14,7 @@ const Root = (params) => (
       <Route exact path='/'>
         <Connexion/>
       </Route>
-      <Route exact path='/pseudo/:pseudo'>
+      <Route path='/pseudo/:pseudo'>
         <App/>
       </Route>
       <Route>
