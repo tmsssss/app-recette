@@ -67,8 +67,10 @@ export default class Admin extends Component {
     if (this.state.uid !== this.state.chef) {
         return(
             <div>
-                <p>Tu n'es pas le chef</p>
-                {logout}
+                <footer>
+                    <p>Vous n'êtes pas le chef de cette page</p>
+                    {logout}
+                </footer>
             </div>
         )
     }
