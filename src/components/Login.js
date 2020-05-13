@@ -1,19 +1,13 @@
 import React from 'react'
 
-import FacebookLogin from 'react-facebook-login';
-
-
  const Login = ({ authenticate }) => {
-    const responseFacebook = (response) => {
-      //  console.log(response);
-      }
     return (
         <div className='login'>
-              <FacebookLogin
-    appId="236870174265532"
-    autoLoad={false}
-    fields="name"
-    callback={responseFacebook} />
+            <h2>Connecte toi</h2>
+            <button onClick={authenticate} className="facebook-button">
+                Me connecter avec facebook
+            </button>
+            
         </div>
     )
 }
