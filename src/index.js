@@ -3,10 +3,32 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Connexion from './components/Connexion';
+import NotFound from './components/NotFound';
+
+
+const Root = (params) => (
+  <Router>
+    <Switch>
+      <Route exact path='/'>
+        <Connexion/>
+      </Route>
+      <Route exact path='/pseudo/:pseudo'>
+        <App/>
+      </Route>
+      <Route>
+        <NotFound/>
+      </Route>
+    </Switch>
+  </Router>
+  
+)
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Root />
   </React.StrictMode>,
   document.getElementById('root')
 );
