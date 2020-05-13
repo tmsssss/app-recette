@@ -5,7 +5,7 @@ import AdminForm from './AdminForm'
 
 export default class Admin extends Component {
     render() {
-    const { addRecette, example, updateRecette, recettes } = this.props
+    const { addRecette, example, updateRecette, recettes, deleteRecette } = this.props
         return (
             <div className="cards">
                 <AddRecette addRecette={ addRecette } />
@@ -16,6 +16,7 @@ export default class Admin extends Component {
                         id={key}
                         updateRecette={updateRecette}
                         recettes={recettes}
+                        deleteRecette={deleteRecette}
                     />)
                 }
                 <footer>

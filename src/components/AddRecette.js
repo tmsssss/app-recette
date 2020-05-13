@@ -17,7 +17,7 @@ export default class AddRecette extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        const recette = {... this.state}
+        const recette = {...this.state}
         this.props.addRecette(recette)
 
         // Reset
@@ -25,7 +25,7 @@ export default class AddRecette extends Component {
             recette[item] = ''
         })
 
-        this.setState({ ... recette })
+        this.setState({...recette })
     }
 
     render() {
