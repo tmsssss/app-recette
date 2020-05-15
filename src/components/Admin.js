@@ -79,7 +79,8 @@ export default class Admin extends Component {
                 <AddRecette addRecette={ addRecette } />
                 {
                     Object.keys(recettes)
-                    .map(key =>  <AdminForm 
+                    .map(key =>  
+                    <AdminForm 
                         key={key}
                         id={key}
                         updateRecette={updateRecette}
